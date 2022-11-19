@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Calculadora de colas</title>
+        <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+        crossorigin="anonymous"
+        />
+        <script src="script.js" type="module"></script>
+    </head>
+
+    <body>
+        <div class="container">
+            <h1>Problema del lavado de autos (M/M/1)</h1>
+            <p id="main-problem">
+                Un lava carro puede atender un auto cada 5 minutos y l a tasa media de
+                llegadas es de 9 autos por hora . Obtenga las medidas de desempeño de
+                acuerdo con el modelo M/M/1. Calcular el valor de desempeño, la probabilidad 
+                de tener una cola de más de 3 clientes y la probabilidad de que esperen
+                más de 30 minutos en la cola.
+            </p>
+            <div class="col-8" id="form-inputs">
+                <div class="form-group">
+                    <label for="lamdaValue">λ =</label>
+                    <input type="number" class="form-control" placeholder="Valor de λ">
+                </div>
+                <div class="form-group">
+                    <label for="uValue">μ =</label>
+                    <input type="number" class="form-control" placeholder="Valor de μ" style="margin-bottom: 20px;">
+                </div>
+                <div class="form-group">
+                    <input class="btn btn-primary" type="button" value="Calcular" id="calcBtn">
+                    <input class="btn btn-danger" type="button" value="Reiniciar" id="resetBtn">
+                </div>
+            </div>
+            <div class="col">
+                <p class="results-text">a) Valor de desempeño: </p>
+                <h4 id="valueA"></h4>
+                <p class="results-text">b) Probabilidad de una cola de más de 3 clientes:</p>
+                <h4 id="valueB"></h4>
+                <p class="results-text">c) Probabilidad de esperar más de 30 minutos en la cola:</p>
+                <h4 id="valueC"></h4>
+            </div>             
+        </div>
+        <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+        crossorigin="anonymous"
+        ></script>
+    </body>
+</html>
