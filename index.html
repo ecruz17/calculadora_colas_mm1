@@ -17,20 +17,23 @@
         <div class="container">
             <h1>Problema del lavado de autos (M/M/1)</h1>
             <p id="main-problem">
-                Un lava carro puede atender un auto cada 5 minutos y l a tasa media de
+                Un lava carro puede atender un auto cada 5 minutos y la tasa media de
                 llegadas es de 9 autos por hora . Obtenga las medidas de desempeño de
                 acuerdo con el modelo M/M/1. Calcular el valor de desempeño, la probabilidad 
                 de tener una cola de más de 3 clientes y la probabilidad de que esperen
                 más de 30 minutos en la cola.
             </p>
+            <p>
+                El promedio de llegadas por minuto es de 9 / 60 = 0.15 por minuto
+            </p>
             <div class="col-8" id="form-inputs">
                 <div class="form-group">
                     <label for="lamdaValue">λ =</label>
-                    <input type="number" class="form-control" placeholder="Valor de λ">
+                    <input type="number" class="form-control" placeholder="Valor de λ" id="inputA">
                 </div>
                 <div class="form-group">
                     <label for="uValue">μ =</label>
-                    <input type="number" class="form-control" placeholder="Valor de μ" style="margin-bottom: 20px;">
+                    <input type="number" class="form-control" placeholder="Valor de μ" id="inputB" style="margin-bottom: 20px;">
                 </div>
                 <div class="form-group">
                     <input class="btn btn-primary" type="button" value="Calcular" id="calcBtn">
