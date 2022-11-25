@@ -75,8 +75,8 @@ calcBtn.addEventListener('click', function () {
         let wsRes = calcWs(valueLsRes, inputAvalue).toString().substring(0, 7);
         let pnRes = calcPn(s, inputAvalue, inputBvalue, p0).toString().substring(0, 7);
 
-        valueA.innerHTML = `𝜌 = ${formatPercentage(valueARes)}`;
-        valueB.innerHTML = `P0 = ${formatPercentage(valueBRes)}`;
+        valueA.innerHTML = `p = ${formatPercentage(valueARes)}`;
+        valueB.innerHTML = `p0 = ${formatPercentage(valueBRes)}`;
         valueC.innerHTML = `Lq = ${valueLqRes}`;
         valueD.innerHTML = `Ls = ${valueLsRes}`;
         valueE.innerHTML = `Wq = ${wqRes}`;
@@ -92,7 +92,7 @@ calcBtn.addEventListener('click', function () {
         valueG.innerHTML = ``;
         Swal.fire({
             icon: 'error',
-            title: 'Oops...',
+            title: 'Uy',
             text: 'Por favor rellena todos los campos necesarios',
         })
     }
