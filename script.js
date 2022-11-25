@@ -68,12 +68,12 @@ calcBtn.addEventListener('click', function () {
         let s = inputCvalue;
 
         let valueARes = Math.round(calcP(inputAvalue, inputBvalue, s));
-        let valueBRes = calcP0(p).toString().substring(0, 7);
+        let valueBRes = Math.round(calcP0(p).toString());
         let valueLqRes = Math.round((calcLq(s, inputAvalue, inputBvalue, p0) + Number.EPSILON) * 100) / 100;
         let valueLsRes = Math.round(calcLs(valueLqRes, inputAvalue, inputBvalue));
-        let wqRes = Math.round(calcWq(inputAvalue, inputBvalue));
-        let wsRes = Math.round(calcWs(valueLsRes, inputAvalue));
-        let pnRes = Math.round(calcPn(s, inputAvalue, inputBvalue, p0));
+        let wqRes = Math.round((calcWq(inputAvalue, inputBvalue) + Number.EPSILON) * 100) / 100;
+        let wsRes = calcWs(valueLsRes, inputAvalue).toString().substring(0, 7);
+        let pnRes = calcPn(s, inputAvalue, inputBvalue, p0).toString().substring(0, 7);
 
         valueA.innerHTML = `𝜌 = ${formatPercentage(valueARes)}`;
         valueB.innerHTML = `P0 = ${formatPercentage(valueBRes)}`;
@@ -81,7 +81,7 @@ calcBtn.addEventListener('click', function () {
         valueD.innerHTML = `Ls = ${valueLsRes}`;
         valueE.innerHTML = `Wq = ${wqRes}`;
         valueF.innerHTML = `Ws = ${wsRes}`;
-        valueG.innerHTML = `Ws = ${pnRes}`;
+        valueG.innerHTML = `Ws = ${formatPercentage(pnRes)}`;
     } else {
         valueA.innerHTML = ``;
         valueB.innerHTML = ``;
@@ -89,6 +89,7 @@ calcBtn.addEventListener('click', function () {
         valueD.innerHTML = ``;
         valueE.innerHTML = ``;
         valueF.innerHTML = ``;
+        valueG.innerHTML = ``;
         Swal.fire({
             icon: 'error',
             title: 'Oops...',
@@ -105,4 +106,7 @@ resetBtn.addEventListener('click', function () {
     valueB.innerHTML = '';
     valueC.innerHTML = '';
     valueD.innerHTML = '';
+    valueE.innerHTML = '';
+    valueF.innerHTML = '';
+    valueG.innerHTML = '';
 })
